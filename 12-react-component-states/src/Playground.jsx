@@ -1,9 +1,9 @@
-import UsersPage from '@/pages/users/UsersPage';
+import NoteApp from './NoteApp/App';
 
 function Playground() {
   return (
     <div style={styles}>
-      <UsersPage />
+      <NoteApp />
     </div>
   );
 }
