@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { INITIAL_SQUARES, PLAYER, PLAYER_COUNT } from '@/tic-tac-toe/constants';
+import {
+  INITIAL_SQUARES,
+  PLAYER,
+  PLAYER_COUNT,
+  checkWinner,
+} from '@/tic-tac-toe/constants';
 import S from './Squares.module.css';
 import Square from '../Square/Square';
 
@@ -13,10 +18,9 @@ function Squares() {
   // [게임 상태 업데이트 기능] ----------------------------------------------------
 
   // 게임을 진행하는 함수
-  const playGame = (index) => {
-    // 게임 상태 변경 -> 리액트에게 렌더 트리거(요청) -> 리액트는 컴포넌트 다시 렌더링 -> 렌더 트리
-    // -> 리액트 돔 이전 렌더 트리 현재 렌더 트리 비교 -> 차이가 발견 -> 실제 DOM 커밋(변경된 부분만 패치)
-    // console.log(`play game #${index}`);
+  const handlePlayGame = (index) => {
+    const result = checkWinner('????');
+    console.log({ result });
     setSquares((prevSquares) => {
       // 다음 번 컴포넌트 렌더링 시, 전달(계산)된 현재 시점의 상태: 이전 스퀘어 집합을 순환해서
       const nextSquares = prevSquares.map((square, squareIndex) => {
@@ -52,7 +56,7 @@ function Squares() {
       {/* 리액트 (JSX) 마크업 : 리스트 렌더링 */}
       {squares.map((square, index) => {
         return (
-          <Square key={index} onPlay={() => playGame(index)}>
+          <Square key={index} onPlay={() => handlePlayGame(index)}>
             {square}
           </Square>
         );
