@@ -1,6 +1,7 @@
 import { OneOfPlayerType } from '@/tic-tac-toe/types/type.d';
 import S from './Status.module.css';
 import { bool } from 'prop-types';
+
 Status.propTypes = {
   winner: OneOfPlayerType,
   nextPlayer: OneOfPlayerType.isRequired,
