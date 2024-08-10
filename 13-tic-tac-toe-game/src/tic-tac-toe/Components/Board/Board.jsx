@@ -34,7 +34,7 @@ function Board() {
     // 아직 진행 중이라면? 게임 진행 (리액트에게 렌더 요청 -> 화면 변경)
     setSquares((prevSquares) => {
       const nextSquares = prevSquares.map((square, idx) => {
-        return idx === index ? currentPlayer : square;
+        return idx === index ? nextPlayer : square;
       });
 
       return nextSquares;
@@ -58,11 +58,18 @@ function Board() {
   // 첫번째 플레이어의 턴인가요?
   const isPlayerOneTurn = gameIndex % PLAYER_COUNT === 0; // true
   // 첫번째 플레이어의 턴이면 PLAYER.ONE 아니면 PLAYER.TWO
-  const currentPlayer = isPlayerOneTurn ? PLAYER.ONE : PLAYER.TWO; // '🍟'
+
+  const nextPlayer = isPlayerOneTurn ? PLAYER.ONE : PLAYER.TWO;
+
+  const isDraw = !winnerInfo && squares.every(Boolean);
 
   return (
     <div className={S.component}>
-      <Status />
+      <Status
+        winner={winnerInfo?.winner}
+        nextPlayer={nextPlayer}
+        isDraw={isDraw}
+      />
       <Squares
         squares={squares}
         winnerInfo={winnerInfo}

@@ -7,24 +7,20 @@
 // - [x] 게임 진행을 처리하는 함수 로직을 작성하고, 리액트에게 다음 상태 변경에 대해 말해주세요.
 // - [ ] 게임이 이겼는 지, 졌는 지 확인하는 승리 조건을 게임의 상수로 선언합니다.
 // --------------------------------------------------------------------------
-import { WINNERS_COLOR, PLAYER_LIST } from '@/tic-tac-toe/constants';
-import S from './Squares.module.css';
+import { func } from 'prop-types';
+import { WINNERS_COLOR } from '@/tic-tac-toe/constants';
+import {
+  OneOfPlayerListType,
+  WinnerInfoType,
+} from '@/tic-tac-toe/types/type.d';
 import Square from '../Square/Square';
-import { arrayOf, func, number, oneOf, shape } from 'prop-types';
-
-const OneOfPlayerType = oneOf(PLAYER_LIST);
-const OneOfPlayerListType = arrayOf(OneOfPlayerType);
-const WinnerInfoType = shape({
-  winner: OneOfPlayerType,
-  condition: arrayOf(number),
-});
+import S from './Squares.module.css';
 
 Squares.propTypes = {
   squares: OneOfPlayerListType.isRequired,
   winnerInfo: WinnerInfoType,
   onPlay: func,
 };
-
 // 상태를 가지지 않는(Stateless) 컴포넌트
 function Squares({ squares, winnerInfo, onPlay }) {
   return (
