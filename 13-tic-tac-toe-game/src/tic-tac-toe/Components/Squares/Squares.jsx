@@ -13,6 +13,10 @@ function Squares() {
   const [squares, setSquares] = useState(INITIAL_SQUARES);
 
   const handlePlayGame = (index) => () => {
+    if (winnerInfo) {
+      alert('GAME OVER');
+      return;
+    }
     setSquares((prevSquares) => {
       const nextSquares = prevSquares.map((square, idx) => {
         return idx === index ? currentPlayer : square;
@@ -23,7 +27,6 @@ function Squares() {
   };
 
   const winnerInfo = checkWinner(squares);
-  console.log('승자는?', winnerInfo);
 
   const gameIndex = squares.filter(Boolean).length; // 0
 
