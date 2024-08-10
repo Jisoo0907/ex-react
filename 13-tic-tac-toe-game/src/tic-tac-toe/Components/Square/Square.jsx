@@ -1,15 +1,18 @@
-import { node } from 'prop-types';
+import { func, node } from 'prop-types';
 import S from './Square.module.css';
 
 Square.propTypes = {
   children: node,
+  onPlay: func,
 };
 
-function Square({ children }) {
-  const isDisabled = !!children; // 파생된 상태
+// 상태를 가지지 않는(Stateless) 컴포넌트
+function Square({ children, onPlay }) {
+  // [파생된 상태]
+  const isDisabled = !!children;
 
   return (
-    <button className={S.component} disabled={isDisabled}>
+    <button className={S.component} onClick={onPlay} disabled={isDisabled}>
       {children}
     </button>
   );
