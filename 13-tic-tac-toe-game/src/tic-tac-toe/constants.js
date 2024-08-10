@@ -3,6 +3,8 @@
 // 예: 🍟 vs. 🍔 / 🎩 vs. 🤡
 export const PLAYER = { ONE: '🍟', TWO: '🤡' };
 
+export const PLAYER_LIST = Object.values(PLAYER);
+
 // 게임 플레이어의 수
 export const PLAYER_COUNT = Object.keys(PLAYER).length;
 
