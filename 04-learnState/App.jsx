@@ -1,7 +1,9 @@
+import Props from '@/components/01-props';
+
 function App() {
   return (
     <div className="App">
-      <h1>Vite + React Scaffolding</h1>
+      <Props />
     </div>
   );
 }
