@@ -27,9 +27,18 @@ function Game() {
       return idx === index ? nextPlayer : square;
     });
 
-    const nextGameHistory = [...gameHistory, nextSquares];
+    const nextGameHistory = [
+      ...gameHistory.slice(0, nextGameIndex),
+      nextSquares,
+    ];
     setGameHistory(nextGameHistory);
   };
+
+  /* 시간 여행 기능 */
+  const handleTimeTravel = (index) => {
+    setGameIndex(index);
+  };
+
   const currentSquares = gameHistory[gameIndex];
 
   const winnerInfo = checkWinner(currentSquares);
@@ -48,7 +57,11 @@ function Game() {
         onPlay={handlePlayGame}
         isDraw={isDraw}
       />
-      <History gameHistory={gameHistory} />
+      <History
+        onTimeTravel={handleTimeTravel}
+        gameHistory={gameHistory}
+        gameIndex={gameIndex}
+      />
     </div>
   );
 }
