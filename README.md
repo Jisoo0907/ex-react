@@ -30,3 +30,4 @@
 - If you don't want to trigger a re-render, use ref.
 - When the component needs to save some data that doesn't affect the rendering logic, use refs.
 - When you need to access a DOM element, you usually use a ref.
+- Do not try to directly modify DOM nodes managed by React.
