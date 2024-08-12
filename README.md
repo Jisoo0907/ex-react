@@ -15,3 +15,7 @@
 - Instead of modifying an object, **create a new object** and then set the state to trigger a rerender. (You can use spread operator.)
 - **Create a new array** from the original array using the **filter or map function**, and then set it to the state.
   - Even if you copy the array, you should not change the data inside the array. (Because it's swallow copy.)
+
+#20240812
+
+- learn **useRef**

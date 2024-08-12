@@ -1,9 +1,7 @@
-import Picture from '@/components/03-picture';
-
 function App() {
   return (
     <div className="App">
-      <Picture />
+      <h1>Vite + React Scaffolding</h1>
     </div>
   );
 }
