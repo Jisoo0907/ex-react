@@ -4,9 +4,13 @@
 
 #20240806
 
+##### JSX
+
 - Put data in React JSX
 
 #20240811
+
+##### props
 
 - **Passing** props from parent to child in React.
 - **State** that acts like a **snapshot**
@@ -18,4 +22,11 @@
 
 #20240812
 
-- learn **useRef**
+##### useRef
+
+- Learn **useRef**
+- useRef has a **current property**, and it's just a **JavaScript object**.
+- We can access the current value from **ref.current**.
+- If you don't want to trigger a re-render, use ref.
+- When the component needs to save some data that doesn't affect the rendering logic, use refs.
+- When you need to access a DOM element, you usually use a ref.
