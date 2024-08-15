@@ -4,13 +4,13 @@
 
 #20240806
 
-##### JSX
+#### <JSX>
 
 - Put data in React JSX
 
 #20240811
 
-##### props
+#### <props>
 
 - **Passing** props from parent to child in React.
 - **State** that acts like a **snapshot**
@@ -22,12 +22,23 @@
 
 #20240812
 
-##### useRef
+#### <useRef>
 
 - Learn **useRef**
 - useRef has a **current property**, and it's just a **JavaScript object**.
 - We can access the current value from **ref.current**.
 - If you don't want to trigger a re-render, use ref.
-- When the component needs to save some data that doesn't affect the rendering logic, use refs.
+- When the component needs to save some data that doesn't affect the rendering logic, use ref.
 - When you need to access a DOM element, you usually use a ref.
 - Do not try to directly modify DOM nodes managed by React.
+
+#20240814
+
+#### <useEffect>
+
+- Learn **useEffect**
+- If you don't want the Effect to run unnecessarily, set the **dependencies list** as the second argument.
+- Effects are usually used to **sync with external systems** that are outside of React.
+- Effects **run after all commits**.
+- You can add a **cleanup function**.
+- useEffect **delays inside the code** until the changes are reflected on the screen.
