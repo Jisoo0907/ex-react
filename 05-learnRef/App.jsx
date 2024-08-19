@@ -1,10 +1,9 @@
-import ChatRoom from '@/component/useEffect';
-// import Form from '@/component/useRef-DOM';
+import UseMemoEx from '@/component/UseMemo';
 
 export default function App() {
   return (
     <>
-      <ChatRoom />
+      <UseMemoEx />
     </>
   );
 }

@@ -42,3 +42,18 @@
 - Effects **run after all commits**.
 - You can add a **cleanup function**.
 - useEffect **delays inside the code** until the changes are reflected on the screen.
+
+#20240820
+
+#### <useMemo>
+
+- Learn **useMemo**
+- useMemo(calculateValue, dependencies)
+  **calculatevalue**
+- Calculate the value you want to cache.
+- It should be pure.
+- React calls the function during the first rendering.
+- React **returns the same value** when the dependencies **haven't changed since the last rendering**.
+  **dependencies**
+- A list of all reactive values referenced within the calculateValue function.
+- useMemo caches the result of a calculation between re-renders until its dependencies change.
