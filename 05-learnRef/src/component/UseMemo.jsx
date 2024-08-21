@@ -1,5 +1,3 @@
-import { useMemo } from 'react';
-
 function UseMemoEx() {
   return <></>;
 }

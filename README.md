@@ -57,3 +57,11 @@
   **dependencies**
 - A list of all reactive values referenced within the calculateValue function.
 - useMemo caches the result of a calculation between re-renders until its dependencies change.
+  #20240821
+
+#### <useContext>
+
+- To solve prop drilling, we can use **Context**.
+- Context helps to deliver data to the **entire subtree**.
+- useContext is a **React hook**, so you can only call it inside a React component.
+-
