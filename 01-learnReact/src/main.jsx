@@ -1,12 +1,13 @@
 import '@/styles/globals.css';
+// import App from '/App.jsx';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import FeedbackForm from './components/FeedbackForm';
+import Reducer from './components/Reducer';
 
 const domNode = document.getElementById('react-app');
 
 createRoot(domNode).render(
   <StrictMode>
-    <FeedbackForm />
+    <Reducer />
   </StrictMode>
 );

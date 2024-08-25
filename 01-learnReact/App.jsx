@@ -1,4 +1,4 @@
-function App() {
+/* function App() {
   const abbr = {
     apple: '초록사과',
     pineapple: '노란파인애플',
@@ -18,4 +18,9 @@ function App() {
     </div>
   );
 }
+export default App; */
+function App() {
+  return <></>;
+}
+
 export default App;
