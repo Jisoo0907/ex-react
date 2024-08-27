@@ -1,0 +1,30 @@
+// Button.scss
+$primary-color: #3498db;
+$hover-color: darken($primary-color, 10%);
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &.secondary {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+
+    &:hover {
+      background-color: darken(#ecf0f1, 10%);
+    }
+  }
+}
