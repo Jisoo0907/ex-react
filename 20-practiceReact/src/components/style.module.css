@@ -1,0 +1,9 @@
+.component {
+  display: flex;
+  justify-content: space-around;
+}
+.row2,
+.row5,
+.row7 {
+  color: blue;
+}
