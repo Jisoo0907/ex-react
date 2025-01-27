@@ -64,4 +64,14 @@
 - To solve prop drilling, we can use **Context**.
 - Context helps to deliver data to the **entire subtree**.
 - useContext is a **React hook**, so you can only call it inside a React component.
--
+
+#20240825
+
+#### <useReducer>
+
+- useReducer is a React Hook that adds a reducer to a component.
+- useReducer returns an array that has two elements.
+- The first element is the state, and the second is the dispatch function.
+- The dispatch function updates the state to a new value and triggers a re-render.
+- The dispatch function takes an argument called action.
+- React receives the current state and an action through dispatch, and then determines the next state based on the return value of the called reducer.
